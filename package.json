@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon server.js",
+    "dev": "node server.js",
     "build": "webpack",
     "prod": "node dist/bundle.js"
   },

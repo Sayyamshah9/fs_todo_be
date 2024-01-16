@@ -9,6 +9,8 @@ const {
 const { ObjectId } = require("mongodb");
 const app = express();
 
+const PORT = process.env.PORT || 3001;
+
 app.use(express.json());
 app.use(cors());
 
@@ -52,7 +54,7 @@ app.put("/put", async (req, res) => {
   }
 });
 
-app.listen(3001, (err) => {
-  console.log("Server is Up and Running!!");
+app.listen(PORT, (err) => {
+  console.log(`Server is Up and Running!! ${PORT}`);
 });
 createConnection();
